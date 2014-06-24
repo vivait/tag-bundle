@@ -17,6 +17,7 @@ Composer.json
     
 Usage:
 Entities need to implement Vivait/Entity/Taggable and the following methods
+```
 
     public function getTags()
     {
@@ -34,12 +35,16 @@ Entities need to implement Vivait/Entity/Taggable and the following methods
         return $this->getId();
     }
 
+```
 
 To use you must first init the tagging manager:
-        $tagManager = $this->get('fpn_tag.tag_manager');
-        $tagManager->loadTagging($entity);
+```
+$tagManager = $this->get('fpn_tag.tag_manager');
+$tagManager->loadTagging($entity);
+```
 
 When adding a new tag - be aware that you can't add duplicates without Doctrine kicking off about a duplicate key
+```
         $tag = $tm->loadOrCreateTag($this->tag);
 
         if(!$finance->getTags()->contains($tag)) {
@@ -50,11 +55,12 @@ When adding a new tag - be aware that you can't add duplicates without Doctrine 
         $em->flush();
 
         $tm->saveTagging($finance);
-
+```
 
 When removing a tag - you must still load the tagging manager
-        $tm = $this->tag_manager;
-        $em = $this->em;
+```
+    $tm = $this->tag_manager;
+    $em = $this->em;
 
         $tm->loadTagging($finance);
         $tag = $tm->loadOrCreateTag($this->tag);
@@ -66,3 +72,4 @@ When removing a tag - you must still load the tagging manager
         $tm->saveTagging($finance);
 
 
+```
