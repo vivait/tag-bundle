@@ -1,0 +1,21 @@
+{
+    "name": "vivait/tag-bundle",
+    "description": "Tag Bundle",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Kiel Goodman",
+            "email": "kiel@vivait.co.uk"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "fpn/tag-bundle":"dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "Vivait\\TagBundle": ""
+        }
+    },
+    "target-dir": "Vivait/TagBundle"
+}
