@@ -21,5 +21,9 @@ class VivaitTagExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
+
+        $container->setParameter('fpn_tag.entity.tag.class', 'Vivait\TagBundle\Entity\Tag');
+        $container->setParameter('fpn_tag.entity.tagging.class', 'Vivait\TagBundle\Entity\Tagging');
+
     }
 }
