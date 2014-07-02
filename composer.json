@@ -10,9 +10,7 @@
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "require": {
-        "fpn/tag-bundle":"~0.9"
-    },
+    "require": {},
     "autoload": {
         "psr-0": {
             "Vivait\\TagBundle": ""

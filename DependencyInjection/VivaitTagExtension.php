@@ -20,8 +20,6 @@ class VivaitTagExtension extends Extension implements PrependExtensionInterface
      */
     public function prepend(ContainerBuilder $container) {
             $config['model']['tag_class'] = 'Vivait\TagBundle\Entity\Tag';
-            $config['model']['tagging_class'] = 'Vivait\TagBundle\Entity\Tagging';
-            $container->prependExtensionConfig('fpn_tag', $config);
     }
 
     public function load(array $configs, ContainerBuilder $container)
